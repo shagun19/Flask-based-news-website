@@ -1,0 +1,338 @@
+body {
+    margin-top: 40px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    font-family: georgia, serif;
+}
+
+divMain {
+    padding-top: 25px;
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 15px;
+    text-align: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button {
+    left: 20px;
+    float: left;
+    width: 15%;
+    height: 300px; /* Should be removed. Only for demonstration */
+    margin-right: 4%;
+}
+
+.newsColumns {
+    left: 20px;
+    float: left;
+    width: 80%;
+
+}
+#my_dataviz, .wordCloud{
+    float: left;
+    width: 39%;
+    height: 300px;
+    background-color: #c4c4c4;
+}
+
+.imageDiv {
+    float: left;
+    width: 59%;
+    height: 300px;
+    margin-right: 2%;
+    position: relative;
+}
+
+div.imageDiv img{
+    width: 100%;
+    height: 300px;
+}
+
+.imageDiv .content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.3); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    text-align: center;
+}
+
+.newsCards{
+    margin: 4px;
+    float: left;
+    width: 23%;
+    border-width: thin;
+    background-color: #EBEBEB;
+    border-radius: 7px;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-align: center;
+    padding: 1px;
+    font-size: 14px;
+    border:1px solid #8f8f8d;
+}
+
+.newsCardImage{
+    border-radius: 7px;
+    width: 100%;
+    height: 120px;
+}
+
+h4{
+    text-align: center;
+    margin: 4px;
+}
+
+.link-spanner{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+
+ul{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+}
+
+.button1 {
+    background-color: #B1B1B1; /* Green */
+    border: 1px solid #585757;
+    color: white;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.button2 {
+    background-color: #B1B1B1; /* Green */
+    border: 1px solid #585757;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.buttonSelected{
+    background-color: #585757;
+    //border-top-left-radius: 4px;
+    //border-top-right-radius: 4px;
+
+}
+
+.button1:hover, .button2:hover {
+    background-color: #2aa14b;
+    color: white;
+    border: 1px solid green;
+}
+
+.search{
+    background-color: #e6e8e6;
+    height: 120px;
+    padding: 20px;
+}
+
+label, input{
+    margin: 2px;
+    margin-right: 8px;
+    margin-bottom: 25px;
+    line-height: 18px;
+}
+
+.label1{
+    margin: 2px;
+    margin-right: 8px;
+    margin-bottom: 20px;
+    margin-left: 120px;
+    margin-top: 35px;
+}
+
+.label2{
+    margin: 2px;
+    margin-right: 8px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 35px;
+}
+
+.labelButton{
+    margin-top: 30px;
+    margin-left: 230px;
+    background-color: #e6e8e6;
+    border-radius: 4px;
+}
+
+input.labelButtonReset {
+    margin-top: 30px;
+    margin-left: 25px;
+    border-radius: 4px;
+    background-color: #e6e8e6;
+}
+
+input.labelButtonReset:hover{
+    background-color: #2F9540;
+    color: white;
+}
+
+input.labelButton:hover{
+    background-color: #2F9540;
+    color: white;
+}
+
+.divSearchResult{
+    width: 95.5%;
+   // width: 92%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #9a9c9a;
+    background-color: #E4E5E5;
+    height: 125px;
+    border-radius: 4px;
+    align: center;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+.divSearchResult::after {
+  content: "";
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: all 0.1s ease-in-out;
+}
+
+.divSearchResult:hover {
+  transform: scale(1.01, 1.01);
+}
+
+.divSearchResult:hover::after {
+    opacity: 1;
+}
+
+.testEnhance{
+    transform: scale(1.01, 1.01);
+    opacity: 1;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+    margin: 2%;
+
+}
+
+
+.smallImgColumn{
+    float: left;
+}
+
+.smallDetailsColumn{
+    float: left;
+    height: 125px;
+    width: 550px;
+}
+
+.smallImgColumn img{
+    height: 80px;
+    width: 80px;
+    margin: 15px;
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 2px 2px;
+  transform: translate(0%, -50%);
+  display: none;
+}
+
+.hideDiv {
+  width: 100%;
+  padding: 5px 0;
+  text-align: left;
+  display: none;
+}
+
+.para-wrap{
+    white-space: nowrap;
+    width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.smallDetailsColumn h1{
+    text-align: left;
+}
+
+.buttonQuery{
+    padding: 4px 10px;
+    margin-left: 287px;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 3px;
+}
+
+input:required:focus {
+  border: 1px solid red;
+  outline: none;
+  box-shadow: 2px 2px 20px rgba(200, 0, 0, 0.5);
+}
+
+label span{
+    color: red;
+}
+
+select{
+    text-align-last: center;
+    text-align: center;
+}
+
+#showMoreButtonId , #showLessButtonId{
+    border-radius: 4px;
+}
+

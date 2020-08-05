@@ -1,0 +1,6 @@
+runtime: python37
+env: standard
+
+handlers:
+- url: /static
+  static_dir: static/
